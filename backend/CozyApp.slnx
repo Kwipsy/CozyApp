@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <File Path="TODO.txt" />
+    <Project Path="src/CozyApp.Api/CozyApp.Api.csproj" />
+    <Project Path="src/CozyApp.Application/CozyApp.Application.csproj" />
+    <Project Path="src/CozyApp.Domain/CozyApp.Domain.csproj" />
+    <Project Path="src/CozyApp.Infrastructure/CozyApp.Infrastructure.csproj" />
+  </Folder>
+</Solution>

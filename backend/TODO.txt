@@ -1,0 +1,1 @@
+As a start, just show all guild members and their characters.
