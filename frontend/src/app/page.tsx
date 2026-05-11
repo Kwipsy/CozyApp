@@ -1,22 +1,22 @@
-import { fetchCharacters } from '@/lib/api';
-import { CharacterList } from '@/components/CharacterList';
-import { ErrorMessage } from '@/components/ErrorMessage';
+'use client';
 
-export default async function Home() {
-  try {
-    const characters = await fetchCharacters();
+import Link from 'next/link';
 
-    return (
-      <main className="container mx-auto px-4 py-8">
-        <CharacterList characters={characters} />
-      </main>
-    );
-  } catch (error) {
-    console.error('Failed to fetch characters:', error);
-    return (
-      <main className="container mx-auto px-4 py-8">
-        <ErrorMessage message="Error loading characters. Make sure your .NET backend is running on localhost:5157" />
-      </main>
-    );
-  }
+export default function Home() {
+  return (
+    <main className="container mx-auto px-4 py-8 flex flex-col items-center justify-center min-h-screen">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to CozyApp</h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Explore our character collection
+        </p>
+        <Link
+          href="/characters"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition"
+        >
+          View Characters
+        </Link>
+      </div>
+    </main>
+  );
 }
