@@ -2,7 +2,7 @@
     "scripts": {
         "dev": "concurrently \"npm --prefix frontend run dev\" \"dotnet run --project backend/src/CozyApp.Api\"",
         "db:start": "docker compose up -d",
-        "db:stop": "docker compose down",
+        "db:stop": "docker compose down -v",
         "frontend": "cd frontend && npm run dev",
         "backend": "cd backend/src/CozyApp.Api && dotnet run"
     },
